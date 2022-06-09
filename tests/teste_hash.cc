@@ -12,6 +12,7 @@ using namespace std;
 
 #define table_size 1111
 
+// Obtem estudantes do arquivo file, colocados no vetor.
 int ImportCSVData(string file, std::vector<Estudante> &estudantes)
 {
 
@@ -68,18 +69,28 @@ int hash1(const char *key)
 int main(int argc, char *argv[])
 {
 
+    // Usado para uma busca simples na tabela hash.
     char* nomes[2] = {"João","John"};
 
+    // arquivo que será lido contendo os estudantes.
     string input = INPUT_DIR + std::string("alunos.csv");
+    
+    // Cria Hash de tamanho table_size e usando hash1 como função.
     HashLinearProbing hash(table_size, hash1);
+    
     std::vector<Estudante> estudantes;
     ImportCSVData(input, estudantes);
+    
+    // Insere os estudantes da hash.
+    // A hash armazena a chave a posição do estudante no vetor estudantes
     int n_inseridos = 0;
     for(int i = 0; i < estudantes.size(); i++){
         if(hash.Insere(estudantes[i].ObterNome(),i))
             n_inseridos++;
     }
 
+    // Testa a hasg buscando por alguns nomes.
+    // Tente pesquisar por outros nomes...
     for(int i =0; i < 2; i++)
     {
         int idx = hash.Pesquisa(nomes[i]);
