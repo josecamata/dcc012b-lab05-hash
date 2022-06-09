@@ -17,8 +17,8 @@ Uma estrutura básica para a implementação da tabela hash já foi fornecida.
  - Os arquivos [hash.h](siga/include/hash.h) e [hash.cc](siga/src/hash.cc) contêm a implementação de uma tabela hash que usa sondagem linear para o tratamento de colisões.
 
  Nessa atividade, vocês devem implementar: 
- 1. As operações **Pesquisa** e **Insere**. Veja os comentários fornecidos nestas rotinas para os detalhes da implementação implementação.
- 2. Funções hash para operar em cadeias de caracteres.
+ 1. as operações **Pesquisa** e **Insere** da tabela hash. Veja os comentários nestas rotinas com os detalhes para implementação.
+ 2. funções hash para operar em cadeias de caracteres.
  
  Eis alguns exemplos de funções hash: 
  - *hash1(s)* = PrimeiraLetra(s) + SegundaLetra(s) + ... + UltimaLetra(s)
@@ -32,7 +32,8 @@ Nas funções acima, s é uma cadeida de caracteres.
 
 A funçao *hash1* já está implementada no arquivo [teste_hash.cc](tests/teste_hash.cc). Observe que a função é
 passada como parametro no construtor da tabela Hash. Dessa forma,
-vc pode usar diferentes funções hash em seus testes. Implemente as demais funções neste arquivo. 
+vc pode usar diferentes funções hash em seus testes. Implemente as demais funções neste arquivo. Você observará
+que esse teste insere alunos obtidos de um arquivo csv na tabela hash usando como chave seus nomes.
 
 Os resultados dos seus experimentos deve ser colocados no arquivo [REPORT.md](REPORT.md).
 
