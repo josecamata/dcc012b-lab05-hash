@@ -34,7 +34,7 @@ A funçao *hash1* já está implementada no arquivo [teste_hash.cc](tests/teste_
 passada como parametro no construtor da tabela Hash. Dessa forma,
 vc pode usar diferentes funções hash em seus testes. Implemente as demais funções neste arquivo. 
 
-Os resultados dos seus experimentos deve ser colocados no arquivo REPORT.md.
+Os resultados dos seus experimentos deve ser colocados no arquivo [REPORT.md](REPORT.md).
 
 ## Compilação e execução
 Configuraçao inicial:
