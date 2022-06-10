@@ -33,7 +33,7 @@ int HashLinearProbing::Pesquisa(const char *key)
 
     // 2. Verificar se é uma posição indica por index é invalida, se for, retorna -1.
     //    Observacao: index é uma posição invalida se o bit flag na posição index 
-    //                for MASK_EMPTY ou MASK_DELETED.
+    //                for MASK_EMPTY.
 
 
     // 3. Verificar se a chave é igual a chave na posição, se for, retorne index;
